@@ -34,10 +34,11 @@ import Css.Border.Style as BorderStyle exposing (Style)
 -}
 color : Color -> Styles -> Styles
 color c styles =
-  BorderBottom.color c
-  <| BorderLeft.color c
-  <| BorderRight.color c
-  <| BorderTop.color c styles
+  styles
+    |> BorderBottom.color c
+    |> BorderLeft.color c
+    |> BorderRight.color c
+    |> BorderTop.color c
 
 
 {-| Sets the style of all four borders
@@ -56,10 +57,11 @@ color c styles =
 -}
 style : Style -> Styles -> Styles
 style s styles =
-  BorderBottom.style s
-  <| BorderLeft.style s
-  <| BorderRight.style s
-  <| BorderTop.style s styles
+  styles
+    |> BorderBottom.style s
+    |> BorderLeft.style s
+    |> BorderRight.style s
+    |> BorderTop.style s
 
 
 {-| Sets the width of all four borders
@@ -77,10 +79,11 @@ style s styles =
 -}
 width : Int -> Int -> Int -> Int -> Styles -> Styles
 width t r b l styles =
-  BorderBottom.width b
-  <| BorderLeft.width l
-  <| BorderRight.width r
-  <| BorderTop.width t styles
+  styles
+    |> BorderBottom.width b
+    |> BorderLeft.width l
+    |> BorderRight.width r
+    |> BorderTop.width t
 
 
 {-| Sets the radius of the
@@ -99,7 +102,8 @@ top left, top right, bottom right, and bottom left.
 -}
 radius : Int -> Int -> Int -> Int -> Styles -> Styles
 radius tl tr br bl styles =
-  BorderTop.leftRadius tl
-  <| BorderTop.rightRadius tr
-  <| BorderBottom.leftRadius bl
-  <| BorderBottom.rightRadius br styles
+  styles
+    |> BorderTop.leftRadius tl
+    |> BorderTop.rightRadius tr
+    |> BorderBottom.leftRadius bl
+    |> BorderBottom.rightRadius br

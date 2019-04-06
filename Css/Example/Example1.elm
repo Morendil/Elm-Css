@@ -45,8 +45,9 @@ flex styles =
 
 centered : Styles -> Styles
 centered styles =
-  Flex.justifyContent Flex.JCCenter
-  <| Flex.alignItems Flex.AICenter styles
+  styles
+    |> Flex.justifyContent Flex.JCCenter
+    |> Flex.alignItems Flex.AICenter
 
 
 column : Styles -> Styles
@@ -56,13 +57,15 @@ column styles =
 
 square : Int ->  Html
 square sideLength =
-  let styles = flex
-    <| centered
-    <| Margin.all 10 10 10 10
-    <| Text.color (rgba 255 255 255 1)
-    <| Background.color (rgba 255 0 0 1)
-    <| Dimension.width sideLength
-    <| Dimension.height sideLength []
+  let styles =
+    []
+      |> flex
+      |> centered
+      |> Margin.all 10 10 10 10
+      |> Text.color (rgba 255 255 255 1)
+      |> Background.color (rgba 255 0 0 1)
+      |> Dimension.width sideLength
+      |> Dimension.height sideLength
   in div
     [ style styles ]
     [ text <| toString sideLength ]
@@ -114,8 +117,9 @@ flex styles =
 
 centered : Styles -> Styles
 centered styles =
-  Flex.justifyContent Flex.JCCenter
-  <| Flex.alignItems Flex.AICenter styles
+  styles
+    |> Flex.justifyContent Flex.JCCenter
+    |> Flex.alignItems Flex.AICenter
 
 
 column : Styles -> Styles
@@ -125,13 +129,15 @@ column styles =
 
 square : Int ->  Html
 square sideLength =
-  let styles = flex
-    <| centered
-    <| Margin.all 10 10 10 10
-    <| Text.color (rgba 255 255 255 1)
-    <| Background.color (rgba 255 0 0 1)
-    <| Dimension.width sideLength
-    <| Dimension.height sideLength []
+  let styles =
+    []
+      |> flex
+      |> centered
+      |> Margin.all 10 10 10 10
+      |> Text.color (rgba 255 255 255 1)
+      |> Background.color (rgba 255 0 0 1)
+      |> Dimension.width sideLength
+      |> Dimension.height sideLength
   in div
     [ style styles ]
     [ text <| toString sideLength ]

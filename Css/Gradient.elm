@@ -4,7 +4,7 @@ module Css.Gradient where
 two or more specified colors.
 
 #Definitions
-@docs linear
+@docs linear, radial
 -}
 
 -- Native Imports

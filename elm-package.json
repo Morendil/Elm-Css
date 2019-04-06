@@ -1,5 +1,5 @@
 {
-    "version": "1.0.1",
+    "version": "1.0.2",
     "summary": "Use the full power of Elm to generate CSS.",
     "repository": "https://github.com/adam-r-kowalski/Elm-Css.git",
     "license": "BSD3",

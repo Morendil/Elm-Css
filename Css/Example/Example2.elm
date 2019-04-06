@@ -58,37 +58,42 @@ flex styles =
 
 end : Styles -> Styles
 end styles =
-  Dimension.height 50
-  <| Background.color (rgba 26 188 156 1)
-  <| centered styles
+  styles
+    |> Dimension.height 50
+    |> Background.color (rgba 26 188 156 1)
+    |> centered
 
 
 side : Styles -> Styles
 side styles =
-  Dimension.width 50
-  <| Background.color (rgba 52 152 219 1)
-  <| centered styles
+  styles
+    |> Dimension.width 50
+    |> Background.color (rgba 52 152 219 1)
+    |> centered
 
 
 content : Styles -> Styles
 content styles =
-  Dimension.width 200
-  <| Dimension.height 200
-  <| Background.color (rgba 52 73 94 1)
-  <| centered styles
+  styles
+    |> Dimension.width 200
+    |> Dimension.height 200
+    |> Background.color (rgba 52 73 94 1)
+    |> centered
 
 
 column : Styles -> Styles
 column styles =
-  flex
-  <| Flex.direction Flex.Column styles
+  styles
+    |> flex
+    |> Flex.direction Flex.Column
 
 
 centered : Styles -> Styles
 centered styles =
-  flex
-  <| Flex.alignItems Flex.AICenter
-  <| Flex.justifyContent Flex.JCCenter styles
+  styles
+    |> flex
+    |> Flex.alignItems Flex.AICenter
+    |> Flex.justifyContent Flex.JCCenter
 """
 
 
@@ -131,34 +136,39 @@ flex styles =
 
 end : Styles -> Styles
 end styles =
-  Dimension.height 50
-  <| Background.color (rgba 26 188 156 1)
-  <| centered styles
+  styles
+    |> Dimension.height 50
+    |> Background.color (rgba 26 188 156 1)
+    |> centered
 
 
 side : Styles -> Styles
 side styles =
-  Dimension.width 50
-  <| Background.color (rgba 52 152 219 1)
-  <| centered styles
+  styles
+    |> Dimension.width 50
+    |> Background.color (rgba 52 152 219 1)
+    |> centered
 
 
 content : Styles -> Styles
 content styles =
-  Dimension.width 200
-  <| Dimension.height 200
-  <| Background.color (rgba 52 73 94 1)
-  <| centered styles
+  styles
+    |> Dimension.width 200
+    |> Dimension.height 200
+    |> Background.color (rgba 52 73 94 1)
+    |> centered
 
 
 column : Styles -> Styles
 column styles =
-  flex
-  <| Flex.direction Flex.Column styles
+  styles
+    |> flex
+    |> Flex.direction Flex.Column
 
 
 centered : Styles -> Styles
 centered styles =
-  flex
-  <| Flex.alignItems Flex.AICenter
-  <| Flex.justifyContent Flex.JCCenter styles
+  styles
+    |> flex
+    |> Flex.alignItems Flex.AICenter
+    |> Flex.justifyContent Flex.JCCenter

@@ -71,7 +71,8 @@ top t styles =
 -}
 all : Int -> Int -> Int -> Int -> Styles -> Styles
 all t r b l styles =
-  top t
-  <| right r
-  <| bottom b
-  <| left l styles
+  styles
+    |> top t
+    |> right r
+    |> bottom b
+    |> left l

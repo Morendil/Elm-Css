@@ -2,20 +2,20 @@ module Css.Flex where
 
 {-| Set the layout of your elements using the flex layout system.
 
-    #Definitions
-    @docs Direction, Wrap, JustifyContent, AlignItem, AlignContent
+#Definitions
+@docs Direction, Wrap, JustifyContent, AlignItem, AlignContent
 
-    #Strings
-    @docs directionString, wrapString, justifyContentString, alignItemString, alignContentString
+#Strings
+@docs directionString, wrapString, justifyContentString, alignItemString, alignContentString
 
-    #Direction and Wrap
-    @docs direction, wrap, flow
+#Direction and Wrap
+@docs direction, wrap, flow
 
-    #Alignment
-    @docs justifyContent, alignItems, alignContent
+#Alignment
+@docs justifyContent, alignItems, alignContent
 
-    #Child Properties
-    @docs order, grow, shrink, basis, alignSelf
+#Child Properties
+@docs order, grow, shrink, basis, alignSelf
 -}
 
 -- Third Party Imports
@@ -329,8 +329,9 @@ wrap w styles =
 -}
 flow : Direction -> Wrap -> Styles -> Styles
 flow d w styles =
-  direction d
-  <| wrap w styles
+  styles
+    |> direction d
+    |> wrap w
 
 
 {-| Set the alignment along the main axis.

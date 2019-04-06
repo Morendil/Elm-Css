@@ -84,9 +84,10 @@ responsiveRow width styles =
 
 end : Styles -> Styles
 end styles =
-  Dimension.height 50
-  <| Background.color (rgba 26 188 156 1)
-  <| centered styles
+  styles
+    |> Dimension.height 50
+    |> Background.color (rgba 26 188 156 1)
+    |> centered
 
 
 side : Int -> Styles -> Styles
@@ -95,30 +96,34 @@ side width styles =
       h = Dimension.height 50 styles
       s = if width < medium then h else styles
   in
-    Dimension.width w
-    <| Background.color (rgba 52 152 219 1)
-    <| centered s
+    s
+      |> Dimension.width w
+      |> Background.color (rgba 52 152 219 1)
+      |> centered
 
 
 content : Styles -> Styles
 content styles =
-  Dimension.width 200
-  <| Dimension.height 200
-  <| Background.color (rgba 52 73 94 1)
-  <| centered styles
+  styles
+    |> Dimension.width 200
+    |> Dimension.height 200
+    |> Background.color (rgba 52 73 94 1)
+    |> centered
 
 
 column : Styles -> Styles
 column styles =
-  flex
-  <| Flex.direction Flex.Column styles
+  styles
+    |> flex
+    |> Flex.direction Flex.Column
 
 
 centered : Styles -> Styles
 centered styles =
-  flex
-  <| Flex.alignItems Flex.AICenter
-  <| Flex.justifyContent Flex.JCCenter styles
+  styles
+    |> flex
+    |> Flex.alignItems Flex.AICenter
+    |> Flex.justifyContent Flex.JCCenter
 """
 
 
@@ -177,9 +182,10 @@ responsiveRow width styles =
 
 end : Styles -> Styles
 end styles =
-  Dimension.height 50
-  <| Background.color (rgba 26 188 156 1)
-  <| centered styles
+  styles
+    |> Dimension.height 50
+    |> Background.color (rgba 26 188 156 1)
+    |> centered
 
 
 side : Int -> Styles -> Styles
@@ -188,27 +194,31 @@ side width styles =
       h = Dimension.height 50 styles
       s = if width < medium then h else styles
   in
-    Dimension.width w
-    <| Background.color (rgba 52 152 219 1)
-    <| centered s
+    s
+      |> Dimension.width w
+      |> Background.color (rgba 52 152 219 1)
+      |> centered
 
 
 content : Styles -> Styles
 content styles =
-  Dimension.width 200
-  <| Dimension.height 200
-  <| Background.color (rgba 52 73 94 1)
-  <| centered styles
+  styles
+    |> Dimension.width 200
+    |> Dimension.height 200
+    |> Background.color (rgba 52 73 94 1)
+    |> centered
 
 
 column : Styles -> Styles
 column styles =
-  flex
-  <| Flex.direction Flex.Column styles
+  styles
+    |> flex
+    |> Flex.direction Flex.Column
 
 
 centered : Styles -> Styles
 centered styles =
-  flex
-  <| Flex.alignItems Flex.AICenter
-  <| Flex.justifyContent Flex.JCCenter styles
+  styles
+    |> flex
+    |> Flex.alignItems Flex.AICenter
+    |> Flex.justifyContent Flex.JCCenter

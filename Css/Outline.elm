@@ -162,6 +162,7 @@ width w styles =
 -}
 all : Color -> Style -> Int -> Styles -> Styles
 all c s w styles =
-  color c
-  <| style s
-  <| width w styles
+  styles
+    |> color c
+    |> style s
+    |> width w

@@ -28,15 +28,17 @@ import Css.Example.Example4 exposing (example4)
 
 centered : Styles -> Styles
 centered styles =
-  Flex.justifyContent Flex.JCCenter
-  <| Flex.alignItems Flex.AICenter
-  <| display Display.Flex styles
+  styles
+    |> display Display.Flex
+    |> Flex.alignItems Flex.AICenter
+    |> Flex.justifyContent Flex.JCCenter
 
 
 middle : Styles -> Styles
 middle styles =
-  display Display.Flex
-  <| Flex.justifyContent Flex.JCAround styles
+  styles
+    |> Flex.justifyContent Flex.JCAround
+    |> display Display.Flex
 
 
 wrap : Styles -> Styles
@@ -52,12 +54,13 @@ column styles =
 header : Html
 header =
   let styles =
-    Shadow.box [ (0, 0, 10, 1, (rgba 0 0 0 1), False) ]
-    <| Background.color (rgba 26 188 156 1)
-    <| Text.color (rgba 255 255 255 1)
-    <| Font.size 36
-    <| Padding.all 10 0 10 0
-    <| centered []
+    []
+      |> centered
+      |> Shadow.box [ (0, 0, 10, 1, (rgba 0 0 0 1), False) ]
+      |> Background.color (rgba 26 188 156 1)
+      |> Text.color (rgba 255 255 255 1)
+      |> Font.size 36
+      |> Padding.all 10 0 10 0
   in
     div
     [ style styles ]
@@ -67,9 +70,10 @@ header =
 example : (Int, Int) -> Example -> Html
 example (width, height) (name, description, codeString, view, explanation) =
   let styles =
-    Padding.all 20 20 0 20
-    <| Dimension.maxWidth 1000
-    <| Dimension.width width []
+    []
+      |> Padding.all 20 20 0 20
+      |> Dimension.maxWidth 1000
+      |> Dimension.width width
   in
     div
     [ style styles ]

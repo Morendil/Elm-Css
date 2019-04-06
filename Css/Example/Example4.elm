@@ -70,15 +70,17 @@ flex styles =
 
 column : Styles -> Styles
 column styles =
-  flex
-  <| Flex.direction Flex.Column styles
+  styles
+    |> flex
+    |> Flex.direction Flex.Column
 
 
 centered : Styles -> Styles
 centered styles =
-  flex
-  <| Flex.alignItems Flex.AICenter
-  <| Flex.justifyContent Flex.JCCenter styles
+  styles
+    |> flex
+    |> Flex.alignItems Flex.AICenter
+    |> Flex.justifyContent Flex.JCCenter
 """
 
 
@@ -122,12 +124,14 @@ flex styles =
 
 column : Styles -> Styles
 column styles =
-  flex
-  <| Flex.direction Flex.Column styles
+  styles
+    |> flex
+    |> Flex.direction Flex.Column
 
 
 centered : Styles -> Styles
 centered styles =
-  flex
-  <| Flex.alignItems Flex.AICenter
-  <| Flex.justifyContent Flex.JCCenter styles
+  styles
+    |> flex
+    |> Flex.alignItems Flex.AICenter
+    |> Flex.justifyContent Flex.JCCenter

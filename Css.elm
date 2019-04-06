@@ -6,11 +6,14 @@ css in Elm more pleasant and concise.
 #Definition
 @docs Styles
 
+#Infix Operator
+@docs (:::)
+
 #String
 @docs colorString
 
 #Functions
-@docs px, url, setViewport, webkit, style
+@docs px, url, setViewport, style
 -}
 
 -- Native Imports
@@ -21,7 +24,7 @@ import Html exposing (Html, Attribute, div, code, text, pre, node)
 import Html.Attributes exposing (style, content, name)
 
 
--- This type alias allows us to be more expressive.
+{-- This type alias allows us to be more expressive. --}
 type alias Styles = List (String, String)
 
 
